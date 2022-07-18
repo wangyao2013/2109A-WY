@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            margin: auto;
+            color: white;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 10px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>鼠标移入改变颜色，鼠标移出恢复</p>
+
+    </div>
+    
+</body>
+<script>
+    let box=document.querySelector(".box")
+    box.onmouseover=function(){
+        this.style.background="#fff"
+        this.style.border="10px solid red"
+        this.style.color="red"
+    }
+    box.onmouseout=function(){
+        this.style.background="#000"
+        this.style.border="10px solid #000"
+        this.style.color="white"
+    }
+</script>
+</html>
