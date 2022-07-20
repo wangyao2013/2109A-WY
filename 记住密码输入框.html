@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* width: 100%; */
+            margin: auto;
+        }
+        .ck{
+            font-size: 13px;
+            
+        }
+        .tit{
+            display: none;
+            width: 200px;
+            background-color: pink;
+            line-height: 25px;
+            font-size: 13px;
+            border: 1px solid gold;
+            box-sizing: border-box;
+            padding: 0 5px;
+        }
+        .show{
+            display: block !important;
+        }
+        .hide{
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="ck"><input type="checkbox">两周内自动登录</p>
+        <div class="tit">
+            为了你的信息安全，请不要在网吧或者公用电脑上使用此功能
+        </div>
+
+    </div>
+</body>
+<script>
+    let ck=document.querySelector(".ck")
+    let tit=document.querySelector(".tit")
+    ck.onmouseover=function(){
+        tit.classList.remove("hide")
+        tit.classList.add("show")
+    }
+    ck.onmouseout=function(){
+        tit.classList.remove("show")
+        tit.classList.add("hide")
+    }
+</script>
+</html>
