@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .div {
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            color: white;
+            font-size: 12px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .box {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <p>属性名：<input type="text" class="name"></p>
+        <p>属性值：<input type="text" class="an"></p>
+    </div>
+    <button class="ok">确定</button>
+    <button class="clear">重置</button>
+    <div class="div">
+        在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。
+    </div>
+
+</body>
+<script>
+    let name = document.querySelector(".name")
+    let an = document.querySelector(".an")
+    let div = document.querySelector(".div")
+    let ok=document.querySelector(".ok")
+    let aa=null
+    let bb=null
+    let clear=document.querySelector(".clear")
+    name.oninput=function(e){
+         aa=e.target.value
+    }
+    an.oninput=function(e){
+        bb=e.target.value
+    }
+    ok.onclick=function(){
+        div.style[aa]=bb
+     
+    }
+    clear.onclick=function(){
+        div.style.background="#000"
+        div.style.color="white"
+    }
+
+
+</script>
+
+</html>

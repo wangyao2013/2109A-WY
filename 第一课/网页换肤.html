@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+        }
+
+        .green {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            margin: 0 10px;
+        }
+
+        .black {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+        }
+
+        .top {
+            display: flex;
+
+        }
+
+        .bgc {
+            background-color: #ff0000;
+        }
+
+        .wid {
+            background-color: #ff0076;
+        }
+
+        td {
+            width: 80px;
+            text-align: center;
+            color: green;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body class="bd">
+    <div class="box">
+        <div class="top">
+            <div class="red">
+
+            </div>
+            <div class="green">
+
+            </div>
+            <div class="black">
+
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    新闻
+                </td>
+                <td>
+                    娱乐
+                </td>
+                <td>
+                    体育
+                </td>
+                <td>
+                    电影
+                </td>
+                <td>
+                    音乐
+                </td>
+                <td>
+                    旅游
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    let top1 = document.querySelector(".top")
+    let red = document.querySelector(".red")
+    let green=document.querySelector(".green")
+    let black=document.querySelector(".black")
+    let td = document.querySelectorAll("td")
+    let ht = document.querySelector(".bd")
+    red.onclick = function (e) {
+        let style = getComputedStyle(red).backgroundColor
+        // console.log(ht);
+        ht.style.backgroundColor = "#ff0076"
+        for (let i = 0; i < td.length; i++) {
+            td[i].style.backgroundColor = style
+            // ht.style.backgroundColor = color[i]
+        }
+    }
+    green.onclick=function(){
+        let style = getComputedStyle(green).backgroundColor
+        // console.log(ht);
+        ht.style.backgroundColor="#718000"
+        for (let i = 0; i < td.length; i++) {
+            td[i].style.backgroundColor = style
+            // ht.style.backgroundColor = color[i]
+        }
+        // console.log('王尧');
+    }
+    black.onclick=function(){
+        let style = getComputedStyle(black).backgroundColor
+        // console.log(ht);
+        ht.style.backgroundColor="#cccccc"
+        for (let i = 0; i < td.length; i++) {
+            td[i].style.backgroundColor = style
+            // ht.style.backgroundColor = color[i]
+        }
+    }
+</script>
+
+</html>
